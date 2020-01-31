@@ -130,4 +130,13 @@ public class OperationsController {
         return "operations/multiply";
     }
 
+    @GetMapping("/divide")
+    public String getDivide(Model model) {
+        RatCalcForm ratCalcForm = new RatCalcForm();
+        ratCalcForm.setOp("/");
+        model.addAttribute("ratCalcForm",ratCalcForm);
+        return "operations/divide";
+    }
+    
+
 }
